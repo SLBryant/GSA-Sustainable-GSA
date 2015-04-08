@@ -3,14 +3,18 @@ body{
     font-family:arial;
     box-sizing:border-box;
 }
+#topnav ul{
+  padding:0;
+}
 header{
-    font-family: Arial,sans-serif;
+  position:relative;
+  padding-bottom:10px!important;
 }
 .main-container{
     box-shadow:1px 1px 10px #999;
     background:#fff;
-    width:1090px!important;
-    padding:0!important;
+    width:1120px!important;
+    padding:15px!important;
 }
 .splash{
   position:relative;
@@ -21,7 +25,7 @@ header{
   color:#fff;
 }
 .active .thumbnails{
-  height:100px;
+  height:140px;
   transition: height 0.5s;
 }
 .thumbnails > div{
