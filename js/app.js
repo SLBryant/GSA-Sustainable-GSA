@@ -6,15 +6,18 @@ $(function() {
 
     router.get('', function(req) {
       resetSections()
+      //ga('send', 'pageview', 'http://gsa.gov/sustainablegsa/' + window.location.hash);
     });
     router.get('/', function(req) {
       resetSections()
+      //ga('send', 'pageview', 'http://gsa.gov/sustainablegsa');
     });
 
     router.get('/:id', function(req) {
         var id = req.params.id;
         console.log(id)
         viewSection(id)
+        //ga('send', 'pageview', 'http://gsa.gov/sustainablegsa/' + window.location.hash);
     });
 
     //clone items to thumbnails
@@ -51,5 +54,6 @@ $(function() {
     }
     function resetSections(){
       $('.splash > div').removeClass('open');
+      $('.wrapper').removeClass('active')
     }
 })

@@ -1,130 +1,152 @@
-body{
-    background-color:rgb(206,213,242);
-    font-family:arial;
-    box-sizing:border-box;
-}
-#topnav ul{
-  padding:0;
-}
-header{
-  position:relative;
-  padding-bottom:10px!important;
-}
-.main-container{
-    box-shadow:1px 1px 10px #999;
-    background:#fff;
-    width:1120px!important;
-    padding:15px!important;
-}
-.splash{
-  position:relative;
-  height:550px;
-}
-.thumbnails{
-  height:0;
-  color:#fff;
-}
-.active .thumbnails{
-  height:140px;
-  transition: height 0.5s;
-}
-.thumbnails > div{
-  width:133px;
-  padding:10px;
-  margin-right:10px;
-  height:133px;
-  float:left;
-  overflow:hidden;
-  cursor:pointer;
-}
-.thumbnails h2{
-    font-size:18px;
-}
-.thumbnails > div:last-child{
-    margin-right:0;
-}
-.thumbnails > div:first-child{
-    width:232px;
-}
-.thumbnails > div > .overview,
-.thumbnails > div > .detail{
-  display:none;
-}
-.splash > div{
-  width:252px;
-  height:252px;
-  position:absolute;
-  color:#fff;
-  overflow:hidden;
-  cursor:pointer;
-  padding:10px;
-}
-.active .splash > div{
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  display:none;
-}
-.splash > div .detail{
-  display:none;
-  width:1070px;
-}
-.splash > div.open > .detail{
-  display:block;
-}
-.splash > div[data-index="1"]{
-    width:529px;
+body {
+    background-color: rgb(206, 213, 242);
+    font-family: arial;
+    box-sizing: border-box;
 }
 
+#topnav ul {
+    padding: 0;
+}
+
+header {
+    position: relative;
+    padding-bottom: 10px!important;
+}
+
+.main-container {
+    box-shadow: 1px 1px 10px #999;
+    background: #fff;
+    width: 1120px!important;
+    padding: 15px!important;
+}
+
+.splash {
+    position: relative;
+    height: 550px;
+}
+
+.thumbnails {
+    height: 0;
+    color: #fff;
+    overflow:hidden;
+}
+
+.active .thumbnails {
+    height: 140px;
+    transition: height 0.5s;
+}
+
+.thumbnails > div {
+    width: 133px;
+    padding: 10px;
+    margin-right: 10px;
+    height: 133px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.thumbnails h2 {
+    font-size: 18px;
+}
+
+.thumbnails > div:last-child {
+    margin-right: 0;
+}
+
+.thumbnails > div:first-child {
+    width: 232px;
+}
+
+.thumbnails > div > .overview,
+.thumbnails > div > .detail {
+    display: none;
+}
+
+.splash > div {
+    width: 252px;
+    height: 252px;
+    position: absolute;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.active .splash > div {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.splash > div .detail {
+    display: none;
+    width: 1070px;
+}
+
+.splash > div.open > .detail {
+    display: block;
+}
+
+.splash > div[data-index="1"] {
+    width: 529px;
+}
 /* SECTIONS */
 
-[data-index="1"]{
-  background:#0087D7;
-  background:#00852B;
-  top:0;
-  left:0;
-}
-[data-index="2"]{
-  background:#0089D9;
-  top:0px;
-    left:544px; 
-}
-[data-index="3"]{
-  background:#3c4cc9;
-  background:#bfd13d;
-  top:0;
-  left:816px;
-}
-[data-index="4"]{
-  background:grey;
-  top:272px;
-  left:0;
-}
-[data-index="5"]{
-  background:#afb2a4;
-  top:272px;
-  left:272px
-}
-[data-index="6"]{
-  background:#047256;
-  top:272px;
-  left:544px
-}
-[data-index="7"]{
-  background:#fff499;
-  background:#8fcefe;
-  top:272px;
-  left:816px
+[data-index="1"] {
+    background: #0087D7;
+    background: #00852B;
+    top: 0;
+    left: 0;
 }
 
-.splash > div.open{
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  transition: all 0.7s;
-  z-index:100;
-  display:block;
-  cursor:default;
+[data-index="2"] {
+    background: #0089D9;
+    top: 0px;
+    left: 544px;
+}
+
+[data-index="3"] {
+    background: #3c4cc9;
+    background: #bfd13d;
+    top: 0;
+    left: 816px;
+}
+
+[data-index="4"] {
+    background: grey;
+    top: 272px;
+    left: 0;
+}
+
+[data-index="5"] {
+    background: #afb2a4;
+    top: 272px;
+    left: 272px
+}
+
+[data-index="6"] {
+    background: #047256;
+    top: 272px;
+    left: 544px
+}
+
+[data-index="7"] {
+    background: #fff499;
+    background: #8fcefe;
+    top: 272px;
+    left: 816px
+}
+
+.splash > div.open {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.7s;
+    z-index: 100;
+    display: block;
+    cursor: default;
 }
