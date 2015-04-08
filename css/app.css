@@ -130,6 +130,11 @@ header {
     transition: width 0.7s;
 }
 
+.splash > div,
+.thumbnails > div{
+  background-size: cover;
+}
+
 .splash > div[data-index="1"] .detail {
     display: block;
     width: 500px;
@@ -142,14 +147,13 @@ header {
 /* SECTIONS */
 
 [data-index="1"] {
-    background: #0087D7;
     background: #00852B;
     top: 0;
     left: 0;
 }
 
 [data-index="2"] {
-    background: #0089D9;
+    background: #0089D9 url('../img/bg-2.jpg');
     top: 0px;
     left: 544px;
 }
