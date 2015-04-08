@@ -20,6 +20,13 @@ header {
     padding: 15px!important;
 }
 
+.wrapper h1,
+.wrapper h3 {
+    text-shadow: 1px 1px 2px #000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+
 .splash {
     position: relative;
     height: 550px;
@@ -28,11 +35,11 @@ header {
 .thumbnails {
     height: 0;
     color: #fff;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .active .thumbnails {
-    height: 140px;
+    height: 110px;
     transition: height 0.5s;
 }
 
@@ -40,14 +47,24 @@ header {
     width: 133px;
     padding: 10px;
     margin-right: 10px;
-    height: 133px;
+    height: 100px;
     float: left;
     overflow: hidden;
     cursor: pointer;
 }
 
-.thumbnails h2 {
+.thumbnails h1 {
     font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+}
+
+.thumbnails h3 {
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
 }
 
 .thumbnails > div:last-child {
@@ -70,7 +87,22 @@ header {
     color: #fff;
     overflow: hidden;
     cursor: pointer;
-    padding: 10px;
+    padding: 45px 10px;
+}
+.splash > div:hover .detail{
+  display:block;
+  width:240px;
+}
+
+.splash h2 {
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    font-size: 17px;
+    padding: 7px 15px;
+    text-transform: uppercase;
 }
 
 .active .splash > div {
@@ -81,17 +113,31 @@ header {
     display: none;
 }
 
+.active .splash h2 {
+    top: 15px;
+    left: 25px;
+    transition: all 0.7s;
+}
+
 .splash > div .detail {
     display: none;
-    width: 1070px;
+    width: 1010px;
 }
 
 .splash > div.open > .detail {
     display: block;
+    width: 1010px;
+    transition: width 0.7s;
+}
+
+.splash > div[data-index="1"] .detail {
+    display: block;
+    width: 529px;
 }
 
 .splash > div[data-index="1"] {
     width: 529px;
+    text-transform: uppercase;
 }
 /* SECTIONS */
 
@@ -149,4 +195,5 @@ header {
     z-index: 100;
     display: block;
     cursor: default;
+    padding: 50px 25px;
 }
