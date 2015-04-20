@@ -1,0 +1,197 @@
+/* =============================================================================
+  MENU TOGGLE SWITCHES
+============================================================================= */
+/**
+ * Toggle Switch Globals
+ *
+ * All switches should take on the class `cmn-toggle-switch` as well as their
+ * variant that will give them unique properties. This class is an overview
+ * class that acts as a reset for all versions of the icon.
+ */
+.cmn-toggle-switch {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 108px;
+  height: 96px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s; }
+
+.cmn-toggle-switch:focus {
+  outline: none; }
+
+.cmn-toggle-switch span {
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: 18px;
+  right: 18px;
+  height: 6px;
+  background: white; }
+
+.cmn-toggle-switch span::before,
+.cmn-toggle-switch span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #fff;
+  content: ""; }
+
+.cmn-toggle-switch span::before {
+  top: -27px; }
+
+.cmn-toggle-switch span::after {
+  bottom: -27px; }
+
+/**
+ * Style 1
+ *
+ * Rotating hamburger icon (rot), that simply rotates 90 degrees when activated.
+ * Nothing too fancy, simple transition.
+ */
+.cmn-toggle-switch__rot {
+  background-color: #28aadc; }
+
+.cmn-toggle-switch__rot span {
+  transition: transform 0.3s; }
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__rot.active {
+  background-color: #166888; }
+
+.cmn-toggle-switch__rot.active span {
+  transform: rotate(90deg); }
+
+/**
+ * Style 2
+ * 
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.cmn-toggle-switch__htx {
+  background-color: #ff3264; }
+
+.cmn-toggle-switch__htx span {
+  transition: background 0s 0.3s; }
+
+.cmn-toggle-switch__htx span::before,
+.cmn-toggle-switch__htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s; }
+
+.cmn-toggle-switch__htx span::before {
+  transition-property: top, transform; }
+
+.cmn-toggle-switch__htx span::after {
+  transition-property: bottom, transform; }
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htx.active {
+  background-color: #cb0032; }
+
+.cmn-toggle-switch__htx.active span {
+  background: none; }
+
+.cmn-toggle-switch__htx.active span::before {
+  top: 0;
+  transform: rotate(45deg); }
+
+.cmn-toggle-switch__htx.active span::after {
+  bottom: 0;
+  transform: rotate(-45deg); }
+
+.cmn-toggle-switch__htx.active span::before,
+.cmn-toggle-switch__htx.active span::after {
+  transition-delay: 0s, 0.3s; }
+
+/**
+ * Style 3
+ *
+ * Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
+ * arrow. Usually indicates an off canvas menu sliding in from left that
+ * will be close on re-click of the icon.
+ */
+.cmn-toggle-switch__htla {
+  background-color: #32dc64; }
+
+.cmn-toggle-switch__htla span {
+  transition: transform 0.3s; }
+
+.cmn-toggle-switch__htla span::before {
+  transform-origin: top right;
+  transition: transform 0.3s, width 0.3s, top 0.3s; }
+
+.cmn-toggle-switch__htla span::after {
+  transform-origin: bottom right;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s; }
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htla.active {
+  background-color: #18903c; }
+
+.cmn-toggle-switch__htla.active span {
+  transform: rotate(180deg); }
+
+.cmn-toggle-switch__htla.active span::before,
+.cmn-toggle-switch__htla.active span::after {
+  width: 50%; }
+
+.cmn-toggle-switch__htla.active span::before {
+  top: 0;
+  transform: translateX(42px) translateY(3px) rotate(45deg); }
+
+.cmn-toggle-switch__htla.active span::after {
+  bottom: 0;
+  transform: translateX(42px) translateY(-3px) rotate(-45deg); }
+
+/**
+ * Style 4
+ *
+ * Hamburger to right-arrow (htra). Hamburger menu transforms to a
+ * right-pointing arrow. Usually indicates an off canvas menu sliding in from 
+ * right that will be close on re-click of the icon.
+ */
+.cmn-toggle-switch__htra {
+  background-color: #ff9650; }
+
+.cmn-toggle-switch__htra span {
+  transition: transform 0.3s; }
+
+.cmn-toggle-switch__htra span::before {
+  transform-origin: top left;
+  transition: transform 0.3s, width 0.3s, top 0.3s; }
+
+.cmn-toggle-switch__htra span::after {
+  transform-origin: bottom left;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s; }
+
+/* active state, i.e. menu open */
+.cmn-toggle-switch__htra.active {
+  background-color: #e95d00; }
+
+.cmn-toggle-switch__htra.active span {
+  transform: rotate(180deg); }
+
+.cmn-toggle-switch__htra.active span::before,
+.cmn-toggle-switch__htra.active span::after {
+  width: 50%; }
+
+.cmn-toggle-switch__htra.active span::before {
+  top: 0;
+  transform: translateX(-6px) translateY(3px) rotate(-45deg); }
+
+.cmn-toggle-switch__htra.active span::after {
+  bottom: 0;
+  transform: translateX(-6px) translateY(-3px) rotate(45deg); }

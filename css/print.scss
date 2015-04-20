@@ -1,0 +1,15 @@
+@media print {
+  .main-container * {
+    visibility: hidden;
+    max-height: 1000px;
+    overflow: hidden;
+  }
+  .modal, .modal * {
+    visibility: visible;
+  }
+  .modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

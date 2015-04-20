@@ -1,0 +1,111 @@
+.thumb {
+  @include flexbox;
+  @include flexAlignItems(center);
+  &:nth-child(1) {
+
+  }
+  aside {
+    opacity: 0;
+    background: rgba(0,0,0,0.5)!important;
+    font-size: 17px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+    position: static!important;
+    line-height: 1;
+    padding: 100px 10px!important;
+    width: 100%;
+  }
+}
+
+
+/*
+#landing-screen {
+  position: relative;
+  height: 515px;
+  .row {
+    position: static;
+    margin-left: -7.5%;
+    margin-right: -7.5%;
+  }
+  .block {
+    height: 250px;
+    overflow: hidden;
+    color: #fff;
+    position: absolute;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+    @include transition(all 0.5s);
+    cursor: pointer;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+      aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 3px 10px;
+        background: $sustainableGreen;
+        text-transform: uppercase;
+      }
+      // block sections
+      &:nth-child(1) {
+        left: 0;
+        top: 0;
+        width: 49%;
+        margin-right: 1%;
+        background: blue;
+      }
+      &:nth-child(2) {
+        left: 50%;
+        top: 0;
+        width: 24.5%;
+        margin-right: 1%;
+        background-image: url(../images/sustainable-buildings.jpg);
+      }
+      &:nth-child(3) {
+        left: 75%;
+        top: 0;
+        width: 24.5%;
+        margin-left: .5%;
+        background-image: url(../images/placeholder-1.jpg);
+      }
+      &:nth-child(4) {
+        left: 0;
+        top: 260px;
+        width: 24%;
+        margin-right: .5%;
+        background-image: url(../images/placeholder-2.jpg);
+      }
+      &:nth-child(5) {
+        left: 24.5%;
+        top: 260px;
+        width: 24%;
+        margin-left: .5%;
+        background-image: url(../images/placeholder-3.jpg);
+      }
+      &:nth-child(6) {
+        left: 50%;
+        top: 260px;
+        width: 24.5%;
+        margin-right: 1%;
+        background: pink;
+      }
+      &:nth-child(7) {
+        left: 75.5%;
+        top: 260px;
+        width: 24.5%;
+        background: teal;
+      }
+      // active block
+      &.active-block {
+        width: 100%!important;
+        height: 100%!important;
+        left: 0!important;
+        top: 0!important;
+        margin: 150px 0 0!important;
+        @include transition(all 0.5s);
+        z-index:  9;
+        @include coverBG;
+      }
+  }
+}
+
+@import 'thumbnails';
+*/
