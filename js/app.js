@@ -4,7 +4,7 @@ if(!GSA){
 
 GSA.indexTracker;
 GSA.thumbNav = new function () {
-    var blockItem = $('#landing .row > div'),
+    var blockItem = $('#landing > .row > div'),
         wrapperWidth = $('#landing > .row').width(),
         thumbBlocks = wrapperWidth / 8,
         thumbNav = '#thumb-nav';
@@ -32,7 +32,7 @@ GSA.thumbNav = new function () {
 };
 
 GSA.activateBlocks = new function() {
-    $('#landing').on('click','.block',function(e) {
+    $('#landing').on('click','.block:not(:eq(0))',function(e) {
         e.preventDefault();
         //maintain height of display area and get index number of clicked block
         var wrapper = $(this).closest('.row');
@@ -53,7 +53,7 @@ GSA.activateBlocks = new function() {
             offsetTop = activeBlock.parent('div').position().top;
 
             // position all the NON ACTIVE blocks
-            $('.block').parent('div').not(activeBlockWrapper).css({opacity: 0, position : 'absolute', left: 0, top: 0, margin: 0, width: '100%',height: '100%'}).removeClass();
+            $('.block').parent('div').not(activeBlockWrapper).css({display: 'none', opacity: 0, position : 'absolute', left: 0, top: 0, margin: 0, width: '100%',height: '100%'}).removeClass();
 
             // position the ACTIVE block
             activeBlockWrapper.css({position : 'absolute', left: offsetLeft, top: offsetTop});
@@ -62,6 +62,7 @@ GSA.activateBlocks = new function() {
                 // display the thumb navigation
                 GSA.thumbNav.displayThumbs();
                 $("html, body").animate({ scrollTop: $('#thumb-nav').offset().top }, 500);
+                $('.slide-section').fadeIn(500);
             });
 
             //change the styles and layout of the active block
@@ -96,8 +97,8 @@ GSA.toggleActiveBlocks = function() {
         var thumbIndex = $(this).index();
         $(thumbBlock).removeClass('active-thumb');
         $(this).addClass('active-thumb');
-        $('.active-block').parent('div').animate({opacity: 0},300).removeClass('active-block');
-        displayBlock.eq(thumbIndex).animate({opacity : 1},400);
+        $('.active-block').parent('div').animate({opacity: 0},300).removeClass('active-block').css('display','none');
+        displayBlock.eq(thumbIndex).css('display','block').animate({ opacity : 1},400);
         displayBlock.eq(thumbIndex).find('.activated').addClass('active-block');
     })
 };
@@ -148,3 +149,4 @@ $(function(){
     GSA.toggleActiveBlocks();
     GSA.blockHover();
 });
+

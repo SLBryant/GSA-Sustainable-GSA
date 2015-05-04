@@ -672,106 +672,122 @@ body {
       outline: 2px dotted blue;
       text-decoration: none; }
 
-#landing .row {
-  margin-left: -7.5px;
-  margin-right: -7.5px;
+#landing {
   position: relative; }
-  #landing .row > div {
-    padding: 7.5px; }
-    #landing .row > div .block {
-      height: 240px;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      position: relative;
-      color: #fff;
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-      overflow: hidden; }
-      #landing .row > div .block > a {
+  #landing .slide-section {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    background: #323e95;
+    border: 0;
+    padding: 5px 10px;
+    color: #fff; }
+    #landing .slide-section.slide-right {
+      right: 0; }
+    #landing .slide-section.slide-left {
+      left: 0; }
+  #landing > .row {
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+    position: relative;
+    overflow: hidden; }
+    #landing > .row > div {
+      padding: 7.5px; }
+      #landing > .row > div .block {
+        height: 240px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+        overflow: hidden; }
+        #landing > .row > div .block > a {
+          display: block;
+          color: inherit;
+          height: 100%;
+          -o-transition: background 0.5s;
+          -ms-transition: background 0.5s;
+          -moz-transition: background 0.5s;
+          -webkit-transition: background 0.5s;
+          transition: background 0.5s; }
+          #landing > .row > div .block > a:hover {
+            background: rgba(0, 66, 42, 0.8);
+            text-decoration: none; }
+        #landing > .row > div .block aside {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          padding: 5px 10px;
+          background: green;
+          text-transform: uppercase;
+          font-size: 22px;
+          font-size: 1.375rem; }
+        #landing > .row > div .block header {
+          font-weight: 800;
+          padding: 50px 0 0 15px;
+          font-size: 32px;
+          font-size: 2rem; }
+        #landing > .row > div .block .rollover {
+          display: none;
+          padding: 5px 10px 10px 15px; }
+          #landing > .row > div .block .rollover .arrow {
+            font-size: 50px;
+            font-size: 3.125rem;
+            position: absolute;
+            bottom: 10px;
+            right: 10px; }
+      #landing > .row > div:first-child .block header {
+        font-size: 40px;
+        font-size: 2.5rem;
+        padding: 40px 40px 0;
+        text-transform: uppercase; }
+      #landing > .row > div:first-child .block aside {
+        display: none; }
+      #landing > .row > div:first-child .block p {
+        padding: 5px 40px; }
+  #landing #thumb-nav > div {
+    float: left;
+    display: none;
+    margin: 0 2px; }
+    #landing #thumb-nav > div:first-child {
+      margin-left: 0; }
+    #landing #thumb-nav > div .thumb {
+      overflow: hidden;
+      height: 100px;
+      background-position: 50% 50%;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: 1px 1px 1px rgba(0, 0, 0, 0.8); }
+      #landing #thumb-nav > div .thumb a {
         display: block;
         color: inherit;
+        background: rgba(0, 0, 0, 0.7);
         height: 100%;
-        -o-transition: background 0.5s;
-        -ms-transition: background 0.5s;
-        -moz-transition: background 0.5s;
-        -webkit-transition: background 0.5s;
-        transition: background 0.5s; }
-        #landing .row > div .block > a:hover {
-          background: rgba(0, 66, 42, 0.8);
-          text-decoration: none; }
-      #landing .row > div .block aside {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 5px 10px;
-        background: green;
+        -o-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s; }
+        #landing #thumb-nav > div .thumb a:hover {
+          background: rgba(0, 0, 0, 0.3);
+          color: white; }
+      #landing #thumb-nav > div .thumb header {
+        display: none; }
+      #landing #thumb-nav > div .thumb aside {
         text-transform: uppercase;
-        font-size: 22px;
-        font-size: 1.375rem; }
-      #landing .row > div .block header {
-        font-weight: 800;
-        padding: 40px 0 0 15px;
-        font-size: 32px;
-        font-size: 2rem; }
-      #landing .row > div .block .rollover {
-        display: none;
-        padding: 5px 10px 10px 15px; }
-        #landing .row > div .block .rollover .arrow {
-          font-size: 50px;
-          font-size: 3.125rem;
+        position: relative;
+        height: 100%; }
+        #landing #thumb-nav > div .thumb aside span {
           position: absolute;
           bottom: 10px;
-          right: 10px; }
-    #landing .row > div:first-child .block header {
-      font-size: 40px;
-      font-size: 2.5rem;
-      padding: 40px 40px 0;
-      text-transform: uppercase; }
-    #landing .row > div:first-child .block aside {
-      display: none; }
-    #landing .row > div:first-child .block p {
-      padding: 5px 40px; }
-#landing #thumb-nav > div {
-  float: left;
-  display: none;
-  margin: 0 2px; }
-  #landing #thumb-nav > div:first-child {
-    margin-left: 0; }
-  #landing #thumb-nav > div .thumb {
-    overflow: hidden;
-    height: 100px;
-    background-position: 50% 50%;
-    color: rgba(255, 255, 255, 0.5);
-    text-decoration: 1px 1px 1px rgba(0, 0, 0, 0.8); }
-    #landing #thumb-nav > div .thumb a {
-      display: block;
-      color: inherit;
-      background: rgba(0, 0, 0, 0.7);
-      height: 100%;
-      -o-transition: all 0.5s;
-      -ms-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s; }
-      #landing #thumb-nav > div .thumb a:hover {
-        background: rgba(0, 0, 0, 0.3);
-        color: white; }
-    #landing #thumb-nav > div .thumb header {
-      display: none; }
-    #landing #thumb-nav > div .thumb aside {
-      text-transform: uppercase;
-      position: relative;
-      height: 100%; }
-      #landing #thumb-nav > div .thumb aside span {
-        position: absolute;
-        bottom: 10px;
-        left: 7px; }
-  #landing #thumb-nav > div.active-thumb a {
-    background: rgba(0, 0, 0, 0.3);
-    color: white; }
+          left: 7px; }
+    #landing #thumb-nav > div.active-thumb a {
+      background: rgba(0, 0, 0, 0.3);
+      color: white; }
 
 .active-block {
   z-index: 2;
@@ -783,10 +799,11 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  overflow: hidden; }
   .active-block > aside {
-    top: 30px;
-    left: 30px;
+    top: 9px;
+    left: 9px;
     position: absolute;
     background: green;
     padding: 8px 15px;
@@ -795,26 +812,47 @@ body {
     text-transform: uppercase;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
   .active-block > header {
-    padding: 75px 0 30px 25px;
+    padding: 50px 0 10px 25px;
     font-size: 50px;
     font-size: 3.125rem; }
   .active-block > article {
     margin: 0 25px;
     /*background: rgba(255,255,255,0.3);
     @include box-shadow(0px 1px 15px 0px, rgba(0,0,0,0.75));*/ }
+  .active-block .overlay {
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: 8px; }
+    .active-block .overlay > .row > div {
+      padding: 0 65px; }
+    .active-block .overlay article {
+      position: relative;
+      padding: 15px 0; }
+      .active-block .overlay article span {
+        position: absolute;
+        top: 50%;
+        right: -8px; }
 
-.full-display-block {
+.full-display-content {
   display: none; }
 
 #news {
   margin-top: 20px; }
+  #news > div:first-child {
+    padding-right: 8px; }
+  #news > div:last-child {
+    padding-left: 8px; }
   #news figure {
-    float: left; }
+    float: left;
+    padding-left: 0; }
     @media only screen and (max-width: 768px) {
       #news figure {
         float: none; } }
   #news article {
-    height: 125px;
+    min-height: 93px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -824,7 +862,8 @@ body {
     -ms-flex-align: center;
     -webkit-align-items: center;
     -moz-align-items: center;
-    align-items: center; }
+    align-items: center;
+    background: #eaeaea; }
     #news article > * {
       padding: 0;
       margin: 0; }
