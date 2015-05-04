@@ -32,6 +32,9 @@ GSA.thumbNav = new function () {
 };
 
 GSA.activateBlocks = new function() {
+    $('#landing').on('click','.block:eq(0)',function(e) {
+        e.preventDefault();
+    });
     $('#landing').on('click','.block:not(:eq(0))',function(e) {
         e.preventDefault();
         //maintain height of display area and get index number of clicked block
@@ -93,13 +96,17 @@ GSA.toggleActiveBlocks = function() {
     var thumbBlock = '#thumb-nav > div';
     var displayBlock = $('#landing > .row > div');
     $('#landing').on('click',thumbBlock,function(e) {
-        e.preventDefault();
         var thumbIndex = $(this).index();
-        $(thumbBlock).removeClass('active-thumb');
-        $(this).addClass('active-thumb');
-        $('.active-block').parent('div').animate({opacity: 0},300).removeClass('active-block').css('display','none');
-        displayBlock.eq(thumbIndex).css('display','block').animate({ opacity : 1},400);
-        displayBlock.eq(thumbIndex).find('.activated').addClass('active-block');
+        if(thumbIndex == 0) {
+            e.preventDefault();
+        } else {
+            e.preventDefault();
+            $(thumbBlock).removeClass('active-thumb');
+            $(this).addClass('active-thumb');
+            $('.active-block').parent('div').animate({opacity: 0}, 300).removeClass('active-block').css('display', 'none');
+            displayBlock.eq(thumbIndex).css('display', 'block').animate({opacity: 1}, 400);
+            displayBlock.eq(thumbIndex).find('.activated').addClass('active-block');
+        }
     })
 };
 
