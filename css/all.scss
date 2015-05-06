@@ -3,7 +3,9 @@
 @import 'mixins';
 @import 'gsa-header-footer';
 @import 'toggle';
-//@import 'thumbnails';
+@import 'blocks';
+@import 'active-block';
+@import 'thumb-nav';
 
 body{
   background-color:rgb(206,213,242);
@@ -24,6 +26,7 @@ body{
 }
 
 #landing {
+  overflow: hidden;
   position: relative;
   .slide-section {
     display: none;
@@ -41,173 +44,15 @@ body{
         left: 0;
       }
   }
-  > .row {
+  .blocks-container {
     margin-left: -7.5px;
     margin-right: -7.5px;
     position: relative;
     overflow: hidden;
-    > div {
+    .block-wrap {
       padding: 7.5px;
-        .block {
-          height: 240px;
-          @include coverBG;
-          position: relative;
-          color: #fff;
-          text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
-          overflow: hidden;
-            > a {
-              display: block;
-              color: inherit;
-              height: 100%;
-              @include transition(background 0.5s);
-                &:hover {
-                  background: rgba(0,66,42,0.8);
-                  text-decoration: none;
-                }
-            }
-            aside {
-              position: absolute;
-              top: 15px;
-              left: 15px;
-              padding: 5px 10px;
-              background: $sustainableGreen;
-              text-transform: uppercase;
-              @include font-size(22px);
-            }
-            header {
-              font-weight: 800;
-              padding: 50px 0 0 15px;
-              @include font-size(32px);
-            }
-            .rollover {
-              display: none;
-              padding: 5px 10px 10px 15px;
-              .arrow {
-                @include font-size(50px);
-                position: absolute;
-                bottom: 10px;
-                right: 10px;
-              }
-            }
-        }
-        &:first-child {
-          .block {
-            header {
-              @include font-size(40px);
-              padding: 40px 40px 0;
-              text-transform: uppercase;
-            }
-            aside {
-              display: none;
-            }
-            p {
-              padding: 5px 40px;
-            }
-          }
-        }
     }
   }
-  #thumb-nav {
-    > div {
-      float: left;
-      display: none;
-      margin: 0 2px;
-        &:first-child {
-          margin-left: 0;
-        }
-        .thumb {
-          overflow: hidden;
-          height: 100px;
-          background-position: 50% 50%;
-          color: rgba(255,255,255,0.5);
-          text-decoration: 1px 1px 1px rgba(0,0,0,0.8);
-            a {
-              display: block;
-              color: inherit;
-              background: rgba(0,0,0,0.7);
-              height: 100%;
-              @include transition(all 0.5s);
-                &:hover {
-                  background: rgba(0,0,0,0.3);
-                  color: rgba(255,255,255,1);
-                }
-            }
-            header {
-              display: none;
-            }
-            aside {
-              text-transform: uppercase;
-              position:relative;
-              height: 100%;
-                span {
-                  position: absolute;
-                  bottom: 10px;
-                  left: 7px;
-                }
-            }
-        }
-        // active thumb
-        &.active-thumb {
-          a {
-            background: rgba(0,0,0,0.3);
-            color: rgba(255,255,255,1);
-          }
-        }
-    }
-  }
-}
-.active-block {
-  z-index: 2;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  color: #fff;
-  @include coverBG;
-  overflow: hidden;
-  > aside {
-    top: 9px;
-    left: 9px;
-    position: absolute;
-    background: $sustainableGreen;
-    padding: 8px 15px;
-    @include font-size(25px);
-    text-transform: uppercase;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
-  }
-  > header {
-    padding: 50px 0 10px 25px;
-    @include font-size(50px);
-  }
-  > article {
-    margin: 0 25px;
-    /*background: rgba(255,255,255,0.3);
-    @include box-shadow(0px 1px 15px 0px, rgba(0,0,0,0.75));*/
-  }
-  .overlay {
-    background: rgba(0,0,0,0.75);
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
-    margin: 8px;
-    > .row {
-      > div {
-        padding: 0 65px;
-      }
-    }
-    article {
-      position: relative;
-      padding: 15px 0;
-      span {
-        position: absolute;
-        top: 50%;
-        right: -8px;
-      }
-    }
-  }
-
-}
-.full-display-content {
-  display: none;
 }
 
 #news {

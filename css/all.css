@@ -659,6 +659,172 @@ Extenders
 .cmn-toggle-switch__htx.active span::after {
   transition-delay: 0s, 0.3s; }
 
+.block-wrap {
+  display: none; }
+  .block-wrap .block {
+    height: 240px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    cursor: pointer; }
+    .block-wrap .block > a {
+      display: block;
+      color: inherit;
+      height: 100%;
+      -o-transition: background 0.5s;
+      -ms-transition: background 0.5s;
+      -moz-transition: background 0.5s;
+      -webkit-transition: background 0.5s;
+      transition: background 0.5s; }
+      .block-wrap .block > a:hover {
+        background: rgba(0, 66, 42, 0.8);
+        text-decoration: none; }
+      .block-wrap .block > a > p {
+        padding: 5px 15px 0; }
+    .block-wrap .block aside {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 5px 10px;
+      background: green;
+      text-transform: uppercase;
+      font-size: 22px;
+      font-size: 1.375rem; }
+    .block-wrap .block header {
+      font-weight: 800;
+      padding: 50px 0 0 15px;
+      font-size: 32px;
+      font-size: 2rem; }
+    .block-wrap .block .rollover {
+      display: none;
+      padding: 5px 10px 10px 15px; }
+      .block-wrap .block .rollover .arrow {
+        font-size: 50px;
+        font-size: 3.125rem;
+        position: absolute;
+        bottom: 10px;
+        right: 10px; }
+
+.block-wrap:first-child .block {
+  cursor: default; }
+  .block-wrap:first-child .block > a:hover {
+    background: rgba(0, 0, 0, 0); }
+  .block-wrap:first-child .block > a .rollover span {
+    display: none; }
+  .block-wrap:first-child .block header {
+    font-size: 40px;
+    font-size: 2.5rem;
+    padding: 40px 40px 0;
+    text-transform: uppercase; }
+  .block-wrap:first-child .block aside {
+    display: none; }
+  .block-wrap:first-child .block p {
+    padding: 5px 25px; }
+
+.full-display-content {
+  display: none; }
+
+.inner-block {
+  z-index: 2;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%; }
+  .inner-block > aside {
+    top: 0;
+    left: 8px;
+    position: absolute;
+    background: green;
+    padding: 8px 15px;
+    font-size: 25px;
+    font-size: 1.5625rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
+  .inner-block > header {
+    padding: 50px 0 10px 25px;
+    font-size: 50px;
+    font-size: 3.125rem; }
+  .inner-block > article {
+    margin: 0 25px; }
+  .inner-block .overlay {
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%; }
+    .inner-block .overlay > .row > div {
+      padding: 0 65px; }
+    .inner-block .overlay article {
+      position: relative;
+      padding: 15px 0; }
+      .inner-block .overlay article span {
+        position: absolute;
+        top: 50%;
+        right: -8px; }
+
+.slide {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+.current {
+  opacity: 1; }
+
+#thumb-nav {
+  margin-bottom: 10px; }
+  #thumb-nav .thumb-wrap {
+    float: left;
+    margin: 0 2px;
+    display: none;
+    background-color: black; }
+    #thumb-nav .thumb-wrap:first-child {
+      margin-left: 0; }
+    #thumb-nav .thumb-wrap .thumb {
+      overflow: hidden;
+      height: 100px;
+      cursor: pointer;
+      background-position: 50% 50%;
+      color: white;
+      text-decoration: 1px 1px 1px rgba(0, 0, 0, 0.8);
+      position: relative;
+      opacity: 0.5;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; }
+      #thumb-nav .thumb-wrap .thumb header {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        text-transform: uppercase;
+        font-size: 21px;
+        font-size: 1.3125rem;
+        font-weight: 600;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75); }
+
+.active-thumb .thumb {
+  opacity: 1 !important; }
+
 body {
   background-color: #ced5f2;
   font-family: arial;
@@ -673,6 +839,7 @@ body {
       text-decoration: none; }
 
 #landing {
+  overflow: hidden;
   position: relative; }
   #landing .slide-section {
     display: none;
@@ -687,157 +854,13 @@ body {
       right: 0; }
     #landing .slide-section.slide-left {
       left: 0; }
-  #landing > .row {
+  #landing .blocks-container {
     margin-left: -7.5px;
     margin-right: -7.5px;
     position: relative;
     overflow: hidden; }
-    #landing > .row > div {
+    #landing .blocks-container .block-wrap {
       padding: 7.5px; }
-      #landing > .row > div .block {
-        height: 240px;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        position: relative;
-        color: #fff;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-        overflow: hidden; }
-        #landing > .row > div .block > a {
-          display: block;
-          color: inherit;
-          height: 100%;
-          -o-transition: background 0.5s;
-          -ms-transition: background 0.5s;
-          -moz-transition: background 0.5s;
-          -webkit-transition: background 0.5s;
-          transition: background 0.5s; }
-          #landing > .row > div .block > a:hover {
-            background: rgba(0, 66, 42, 0.8);
-            text-decoration: none; }
-        #landing > .row > div .block aside {
-          position: absolute;
-          top: 15px;
-          left: 15px;
-          padding: 5px 10px;
-          background: green;
-          text-transform: uppercase;
-          font-size: 22px;
-          font-size: 1.375rem; }
-        #landing > .row > div .block header {
-          font-weight: 800;
-          padding: 50px 0 0 15px;
-          font-size: 32px;
-          font-size: 2rem; }
-        #landing > .row > div .block .rollover {
-          display: none;
-          padding: 5px 10px 10px 15px; }
-          #landing > .row > div .block .rollover .arrow {
-            font-size: 50px;
-            font-size: 3.125rem;
-            position: absolute;
-            bottom: 10px;
-            right: 10px; }
-      #landing > .row > div:first-child .block header {
-        font-size: 40px;
-        font-size: 2.5rem;
-        padding: 40px 40px 0;
-        text-transform: uppercase; }
-      #landing > .row > div:first-child .block aside {
-        display: none; }
-      #landing > .row > div:first-child .block p {
-        padding: 5px 40px; }
-  #landing #thumb-nav > div {
-    float: left;
-    display: none;
-    margin: 0 2px; }
-    #landing #thumb-nav > div:first-child {
-      margin-left: 0; }
-    #landing #thumb-nav > div .thumb {
-      overflow: hidden;
-      height: 100px;
-      background-position: 50% 50%;
-      color: rgba(255, 255, 255, 0.5);
-      text-decoration: 1px 1px 1px rgba(0, 0, 0, 0.8); }
-      #landing #thumb-nav > div .thumb a {
-        display: block;
-        color: inherit;
-        background: rgba(0, 0, 0, 0.7);
-        height: 100%;
-        -o-transition: all 0.5s;
-        -ms-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-        transition: all 0.5s; }
-        #landing #thumb-nav > div .thumb a:hover {
-          background: rgba(0, 0, 0, 0.3);
-          color: white; }
-      #landing #thumb-nav > div .thumb header {
-        display: none; }
-      #landing #thumb-nav > div .thumb aside {
-        text-transform: uppercase;
-        position: relative;
-        height: 100%; }
-        #landing #thumb-nav > div .thumb aside span {
-          position: absolute;
-          bottom: 10px;
-          left: 7px; }
-    #landing #thumb-nav > div.active-thumb a {
-      background: rgba(0, 0, 0, 0.3);
-      color: white; }
-
-.active-block {
-  z-index: 2;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  color: #fff;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden; }
-  .active-block > aside {
-    top: 9px;
-    left: 9px;
-    position: absolute;
-    background: green;
-    padding: 8px 15px;
-    font-size: 25px;
-    font-size: 1.5625rem;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
-  .active-block > header {
-    padding: 50px 0 10px 25px;
-    font-size: 50px;
-    font-size: 3.125rem; }
-  .active-block > article {
-    margin: 0 25px;
-    /*background: rgba(255,255,255,0.3);
-    @include box-shadow(0px 1px 15px 0px, rgba(0,0,0,0.75));*/ }
-  .active-block .overlay {
-    background: rgba(0, 0, 0, 0.75);
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
-    margin: 8px; }
-    .active-block .overlay > .row > div {
-      padding: 0 65px; }
-    .active-block .overlay article {
-      position: relative;
-      padding: 15px 0; }
-      .active-block .overlay article span {
-        position: absolute;
-        top: 50%;
-        right: -8px; }
-
-.full-display-content {
-  display: none; }
 
 #news {
   margin-top: 20px; }

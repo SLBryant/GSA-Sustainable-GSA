@@ -1,0 +1,40 @@
+#thumb-nav {
+  margin-bottom: 10px;
+  .thumb-wrap {
+    float: left;
+    margin: 0 2px;
+    display: none;
+    background-color: rgba(0,0,0,1);
+    &:first-child {
+      margin-left: 0;
+    }
+    .thumb {
+      overflow: hidden;
+      height: 100px;
+      cursor: pointer;
+      background-position: 50% 50%;
+      color: rgba(255,255,255,1);
+      text-decoration: 1px 1px 1px rgba(0,0,0,0.8);
+      position: relative;
+      opacity: 0.5;
+      @include coverBG();
+        header {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          text-transform: uppercase;
+          @include font-size(21px);
+          font-weight: 600;
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+        }
+
+    }
+  }
+}
+
+.active-thumb {
+  .thumb {
+    opacity: 1!important;
+  }
+}
+

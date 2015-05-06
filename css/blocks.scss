@@ -1,0 +1,78 @@
+.block-wrap {
+  display: none;
+  .block {
+    height: 240px;
+    @include coverBG;
+    position: relative;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    cursor: pointer;
+    > a {
+      display: block;
+      color: inherit;
+      height: 100%;
+      @include transition(background 0.5s);
+      &:hover {
+        background: rgba(0, 66, 42, 0.8);
+        text-decoration: none;
+      }
+      > p {
+        padding: 5px 15px 0;
+      }
+    }
+    aside {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      padding: 5px 10px;
+      background: $sustainableGreen;
+      text-transform: uppercase;
+      @include font-size(22px);
+    }
+    header {
+      font-weight: 800;
+      padding: 50px 0 0 15px;
+      @include font-size(32px);
+    }
+    .rollover {
+      display: none;
+      padding: 5px 10px 10px 15px;
+      .arrow {
+        @include font-size(50px);
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+
+// FIRST BLOCK
+.block-wrap:first-child {
+  .block {
+    cursor: default;
+    > a {
+      &:hover {
+        background: rgba(0, 0, 0, 0);
+      }
+      .rollover {
+        span {
+          display: none;
+        }
+      }
+    }
+    header {
+      @include font-size(40px);
+      padding: 40px 40px 0;
+      text-transform: uppercase;
+    }
+    aside {
+      display: none;
+    }
+    p {
+      padding: 5px 25px;
+    }
+  }
+}
