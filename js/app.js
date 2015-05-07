@@ -4,22 +4,34 @@ if(!GSA){
 
 GSA.indexTracker;
 GSA.retrieveContent = function() {
-    var CIDs = ['strategically_sustainable','buildings', 'products-services', 'fleets', 'workplaces', 'policy', 'results']; // add CID numbers to this array
-    for (var i=0; i<CIDs.length; i++) {
+    var CIDs = {
+        1: 'strategically_sustainable',
+        2: 'buildings',
+        3: 'products-services',
+        4: 'fleets',
+        5: 'workplaces',
+        6: 'policy',
+        7: 'results'
+    };
+    $.each(CIDs, function(key, value) {
         $.ajax({
-            url: 'CID/' + CIDs[i] + '.php',
+            url: 'CID/' + value + '.php',
             success: function(data) {
-                GSA.initialDisplay(data);
-                GSA.populateThumbs(data);
+                GSA.initialDisplay(data, key);
+                GSA.populateThumbs(data, key);
             },
             error : function() {
                 // errorFunction();
             }
         });
-    }
+    });
+    setTimeout(function() {
+        sortDivs('.blocks-container', '.block-wrap');
+        $('.block-wrap').fadeIn(500);
+    },800);
 };
 
-GSA.initialDisplay = function(data) {
+GSA.initialDisplay = function(data, key) {
     var response = $(data);
     var contentBlock = response.filter('#data-block').html(),
             size = $(contentBlock).find('#size').html(),
@@ -28,7 +40,7 @@ GSA.initialDisplay = function(data) {
             title = $(contentBlock).find('#title').html(),
             excerpt = $(contentBlock).find('#excerpt').html();
             content = $(contentBlock).find('#content').html();
-    var template = '<div class="col-sm-'+size+' block-wrap">'+
+    var template = '<div class="col-sm-'+size+' block-wrap" data-sort="'+key+'">'+
                         '<div class="block" style="background-image: url(images/'+image+')">'+
                             '<a data-content="ajax">'+
                                 '<aside><span>'+tag+'</span></aside>'+
@@ -45,7 +57,6 @@ GSA.initialDisplay = function(data) {
                     '</div>';
 
     $('.blocks-container').append(template);
-    $('.block-wrap').fadeIn(500);
 };
 
 GSA.blockHover = function() {
@@ -59,7 +70,7 @@ GSA.blockHover = function() {
     },'.block');
 };
 
-GSA.populateThumbs = function(data) {
+GSA.populateThumbs = function(data, key) {
     var response = $(data);
     var contentBlock = response.filter('#data-block').html(),
         image = $(contentBlock).find('#image').html(),
@@ -69,7 +80,7 @@ GSA.populateThumbs = function(data) {
         spacePadding = 6,
         blockWidth = thumbBlocks - spacePadding;
 
-    var template = '<div class="thumb-wrap" style="width:'+blockWidth+'px">'+
+    var template = '<div class="thumb-wrap" style="width:'+blockWidth+'px" data-sort="'+key+'">'+
         '<div class="thumb" style="background-image: url(images/'+image+')">'+
         '<header>'+title+'</header>'+
         '</div>'+
@@ -77,10 +88,14 @@ GSA.populateThumbs = function(data) {
 
     $('#thumb-nav').append(template);
 
-    $('#thumb-nav > div:first-child').css('width', (thumbBlocks*2)-spacePadding);
 };
 
 GSA.displayThumbs = function() {
+    var wrapperWidth = $('.blocks-container').width(),
+        thumbBlocks = wrapperWidth / 8,
+        spacePadding = 6;
+    sortDivs('#thumb-nav', '.thumb-wrap');
+    $('#thumb-nav > div:first-child').css('width', (thumbBlocks*2)-spacePadding);
     $('#thumb-nav').children('div').each(function(i) {
         if(i == GSA.indexTracker) {
             $(this).addClass('active-thumb');
@@ -198,7 +213,12 @@ GSA.resetBlocks = function() {
     },700);
 };
 
-
+function sortDivs(wrapper,item) {
+    var $wrapper = $(wrapper);
+    $wrapper.find(item).sort(function (a, b) {
+        return +a.getAttribute('data-sort') - +b.getAttribute('data-sort');
+    }).appendTo( $wrapper );
+}
 /* /////////////////////////
     DOCUMENT READY        ///
 /////////////////////////*/
