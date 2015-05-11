@@ -190,6 +190,8 @@ GSA.nextSlide = function() {
             $('.slide-right').fadeOut(300);
         }
         GSA.updateThumbIndex();
+        //router
+        router.navigate(GSA.CIDs[GSA.indexTracker+1]);
     })
 };
 
@@ -206,6 +208,8 @@ GSA.prevSlide = function() {
                 $('.slide-left').fadeOut(300);
             }
             GSA.updateThumbIndex();
+            //router
+            router.navigate(GSA.CIDs[GSA.indexTracker+1]);
         }
     })
 };
