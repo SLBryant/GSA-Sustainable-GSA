@@ -15,8 +15,8 @@
         <tr>
             <td id="size">3</td><!-- bootstrap grid -->
             <td id="image">placeholder-2.jpg</td>
-            <td id="tag">Buildings</td>
-            <td id="title">Constructing<br> the Future</td>
+            <td id="tag">Workplaces</td>
+            <td id="title">Lorem ipsum dolor sit amet</td>
             <td id="excerpt"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis erat sapien. Aliquam ullamcorper viverra lacus non mattis.</p></td>
             <td id="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis erat sapien. Aliquam ullamcorper viverra lacus non mattis. Sed eu odio mi. Pellentesque ac leo interdum, tincidunt risus eget, accumsan risus. Etiam iaculis libero vel velit tincidunt, vitae egestas est tincidunt. Vestibulum viverra sem et convallis consequat. Nullam ullamcorper dolor sapien, ac pretium leo vulputate nec. ibus semper augue.Quisque ac ante sit amet orci consectetur finibus.</p>

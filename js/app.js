@@ -2,18 +2,21 @@ if(!GSA){
     var GSA = {}
 }
 
+// define the router
+var router = new Grapnel({root : '/OGILVY/sustainable-gsa/' , pushState : true }); // change root for production / dev, etc
+
 GSA.indexTracker;
+GSA.CIDs =   {
+    1: 'strategically_sustainable',
+    2: 'buildings',
+    3: 'products-services',
+    4: 'fleets',
+    5: 'workplaces',
+    6: 'policy',
+    7: 'results'
+};
 GSA.retrieveContent = function() {
-    var CIDs = {
-        1: 'strategically_sustainable',
-        2: 'buildings',
-        3: 'products-services',
-        4: 'fleets',
-        5: 'workplaces',
-        6: 'policy',
-        7: 'results'
-    };
-    $.each(CIDs, function(key, value) {
+    $.each(GSA.CIDs, function(key, value) {
         $.ajax({
             url: 'CID/' + value + '.php',
             success: function(data) {
@@ -107,6 +110,8 @@ GSA.displayThumbs = function() {
 GSA.activateBlocks = new function() {
     //disable functionality for first block click
     $('#landing').on('click','.block',function(e) {
+        var header = $(this).find('aside').text();
+        var indexValue = $(this).parent('div').index() + 1;
         if($(this).parent('div').index() === 0) {
             e.preventDefault();
         } else {
@@ -139,6 +144,9 @@ GSA.activateBlocks = new function() {
                  image = $(this).children('.block').css('background-image');
                  $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html('<div class="inner-block" style="background-image:'+image+'"><aside>'+title+'</aside><header>'+label+'</header><article>'+text+'</article></div>').css({height : '100%'});
             });
+
+            // router
+            router.navigate(GSA.CIDs[indexValue]);
         }
     });
 };
@@ -150,6 +158,7 @@ GSA.toggleActiveBlocks = function() {
         var thumbIndex = $(this).index();
         if(thumbIndex == 0) {
             GSA.resetBlocks();
+            router.navigate('');
         } else {
             e.preventDefault();
             $(thumbBlock).removeClass('active-thumb');
@@ -159,6 +168,9 @@ GSA.toggleActiveBlocks = function() {
                 $('.current').not(currentSlide).fadeOut(300).delay(300).removeClass('current');
             });
             GSA.indexTracker = thumbIndex;
+            //router
+
+            router.navigate(GSA.CIDs[thumbIndex+1]);
         }
     })
 };
@@ -204,6 +216,7 @@ GSA.resetBlocks = function() {
         $(this).remove();
         // display left/right navigation
         $('.slide-section').fadeOut(500);
+        // fade out and remove existing slides
         $('.blocks-container > *').fadeOut(500,function() {
             $(this).remove();
         });
@@ -223,24 +236,23 @@ function sortDivs(wrapper,item) {
     DOCUMENT READY        ///
 /////////////////////////*/
 $(function(){
+
+    /*router.get('', function(req) {
+        GSA.retrieveContent();
+    });*/
+
+    /*router.get(':id', function(req) {
+        var id = req.params.id;
+        console.log('id2: '+id)
+        //viewSection(id)
+    });*/
+
     GSA.retrieveContent();
     GSA.blockHover();
     GSA.nextSlide();
     GSA.prevSlide();
     GSA.toggleActiveBlocks();
+
 });
 
 
-/* ROUTER STUFF
-
- var router = new Grapnel({ pushState : true });
-
- router.get('/OGILVY/sustainable-gsa-2/', function(req) {
- $('body').addClass('none');
- });
- router.get('/', function(req) {
- $('body').addClass('slash');
- });
-
- //router.navigate('/OGILVY/sustainable-gsa-2/CID/strategically_sustainable.php');
- */
