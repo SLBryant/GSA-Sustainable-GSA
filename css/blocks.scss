@@ -1,5 +1,10 @@
 .block-wrap {
   display: none;
+  &:first-child {
+    .rollover {
+      display:block!important;
+    }
+  }
   .block {
     height: 240px;
     @include coverBG;

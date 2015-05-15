@@ -31,7 +31,7 @@ GSA.retrieveContent = function() {
     setTimeout(function() {
         sortDivs('.blocks-container', '.block-wrap');
         $('.block-wrap').fadeIn(500);
-    },800);
+    },200);
 };
 
 GSA.initialDisplay = function(data, key) {
@@ -70,7 +70,7 @@ GSA.blockHover = function() {
         mouseleave: function () {
             $(this).find('.rollover').stop().fadeOut(300);
         }
-    },'.block');
+    },'.block-wrap:not(:first-child)');
 };
 
 GSA.populateThumbs = function(data, key) {
@@ -105,7 +105,7 @@ GSA.displayThumbs = function() {
         }
        $(this).delay(i * 100).slideDown(600);
     });
-}
+};
 
 GSA.activateBlocks = new function() {
     //disable functionality for first block click
@@ -142,7 +142,8 @@ GSA.activateBlocks = new function() {
                  label = $(this).find('aside').text(),
                  text = $(this).find('.full-display-content').html();
                  image = $(this).children('.block').css('background-image');
-                 $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html('<div class="inner-block" style="background-image:'+image+'"><aside>'+title+'</aside><header>'+label+'</header><article>'+text+'</article></div>').css({height : '100%'});
+                console.log(image);
+                 $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background-image:"+image+"'><aside>"+title+"</aside><header>"+label+"</header><article>"+text+"</article></div>").css({height : '100%'});
             });
 
             // router
@@ -158,6 +159,7 @@ GSA.toggleActiveBlocks = function() {
         var thumbIndex = $(this).index();
         if(thumbIndex == 0) {
             GSA.resetBlocks();
+            GSA.
             router.navigate('');
         } else {
             e.preventDefault();
@@ -216,6 +218,7 @@ GSA.prevSlide = function() {
 
 GSA.resetBlocks = function() {
     var thumbs = $('#thumb-nav').children('div');
+    $('<div></div>').attr('id','loader').appendTo('#landing');
     thumbs.slideUp(500,function() {
         $(this).remove();
         // display left/right navigation
@@ -226,8 +229,9 @@ GSA.resetBlocks = function() {
         });
     });
     setTimeout(function() {
+        $('#loader').fadeOut(500, function() {$(this).remove()});
         GSA.retrieveContent();
-    },700);
+    },900);
 };
 
 function sortDivs(wrapper,item) {
