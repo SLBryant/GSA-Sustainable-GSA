@@ -3,7 +3,7 @@ if(!GSA){
 }
 
 $(function(){
-    var router = new Grapnel({root : '/git/sustainable-gsa/'  }); // change root for production / dev /git/sustainable-gsa/
+    var router = new Grapnel({root : '/git/sustainable-gsa/'  }); // change root for production / dev /git/sustainable-gsa/ 
 
     GSA.initState = true;
     GSA.indexTracker;
@@ -291,8 +291,9 @@ $(function(){
 
     //Routes
 
-    router.get('/', function(req) {
+    router.get('', function(req) {
         GSA.retrieveContent();
+        GSA.initState = false;
     });
 
     router.get('/buildings', function(req) {
