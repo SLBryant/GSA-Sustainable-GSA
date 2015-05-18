@@ -18,7 +18,7 @@ GSA.CIDs =   {
 };
 GSA.retrieveContent = function() {
     $.each(GSA.CIDs, function(key, value) {
-        $.ajax({
+        $.ajax({            
             url: 'CID/' + value + '.php',
             success: function(data) {
                 GSA.initialDisplay(data, key);
@@ -32,7 +32,7 @@ GSA.retrieveContent = function() {
     setTimeout(function() {
         sortDivs('.blocks-container', '.block-wrap');
         $('.block-wrap').fadeIn(500);
-    },200);
+    },900);
 };
 
 GSA.initialDisplay = function(data, key) {
