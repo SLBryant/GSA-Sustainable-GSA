@@ -3,7 +3,8 @@ if(!GSA){
 }
 
 // define the router
-var router = new Grapnel({root : '/OGILVY/sustainable-gsa/' , pushState : true }); // change root for production / dev, etc
+var router = new Grapnel({root : '/git/sustainable-gsa/' , pushState : true }); // change root for production / dev, etc
+
 
 GSA.indexTracker;
 GSA.CIDs =   {
@@ -142,12 +143,11 @@ GSA.activateBlocks = new function() {
                  label = $(this).find('aside').text(),
                  text = $(this).find('.full-display-content').html();
                  image = $(this).children('.block').css('background-image');
-                console.log(image);
                  $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background-image:"+image+"'><aside>"+title+"</aside><header>"+label+"</header><article>"+text+"</article></div>").css({height : '100%'});
             });
 
             // router
-            router.navigate(GSA.CIDs[indexValue]);
+            router.navigate('#/'+GSA.CIDs[indexValue]);
         }
     });
 };
@@ -172,7 +172,7 @@ GSA.toggleActiveBlocks = function() {
             GSA.indexTracker = thumbIndex;
             //router
 
-            router.navigate(GSA.CIDs[thumbIndex+1]);
+            router.navigate('#/'+GSA.CIDs[thumbIndex+1]);
         }
     })
 };
@@ -193,7 +193,7 @@ GSA.nextSlide = function() {
         }
         GSA.updateThumbIndex();
         //router
-        router.navigate(GSA.CIDs[GSA.indexTracker+1]);
+        router.navigate('#/'+GSA.CIDs[GSA.indexTracker+1]);
     })
 };
 
@@ -211,7 +211,7 @@ GSA.prevSlide = function() {
             }
             GSA.updateThumbIndex();
             //router
-            router.navigate(GSA.CIDs[GSA.indexTracker+1]);
+            router.navigate('#/'+GSA.CIDs[GSA.indexTracker+1]);
         }
     })
 };
@@ -244,11 +244,6 @@ function sortDivs(wrapper,item) {
     DOCUMENT READY        ///
 /////////////////////////*/
 $(function(){
-
-    /*router.get('', function(req) {
-        GSA.retrieveContent();
-    });*/
-
     /*router.get(':id', function(req) {
         var id = req.params.id;
         console.log('id2: '+id)
