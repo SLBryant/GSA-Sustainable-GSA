@@ -3,7 +3,7 @@ if(!GSA){
 }
 
 // define the router
-var router = new Grapnel({root : '/git/sustainable-gsa/' , pushState : true }); // change root for production / dev, etc
+var router = new Grapnel({root : '/git/sustainable-gsa/' , pushState : true }); // change root for production / dev /git/sustainable-gsa/
 
 
 GSA.indexTracker;
@@ -17,8 +17,9 @@ GSA.CIDs =   {
     7: 'results'
 };
 GSA.retrieveContent = function() {
+    $('<div></div>').attr('id','loader').appendTo('#landing');
     $.each(GSA.CIDs, function(key, value) {
-        $.ajax({            
+        $.ajax({
             url: 'CID/' + value + '.php',
             success: function(data) {
                 GSA.initialDisplay(data, key);
@@ -30,9 +31,10 @@ GSA.retrieveContent = function() {
         });
     });
     setTimeout(function() {
+        $('#loader').fadeOut(500, function() {$(this).remove()});
         sortDivs('.blocks-container', '.block-wrap');
         $('.block-wrap').fadeIn(500);
-    },900);
+    },2000);
 };
 
 GSA.initialDisplay = function(data, key) {
@@ -159,8 +161,7 @@ GSA.toggleActiveBlocks = function() {
         var thumbIndex = $(this).index();
         if(thumbIndex == 0) {
             GSA.resetBlocks();
-            GSA.
-            router.navigate('');
+            GSA.router.navigate('');
         } else {
             e.preventDefault();
             $(thumbBlock).removeClass('active-thumb');
@@ -218,7 +219,6 @@ GSA.prevSlide = function() {
 
 GSA.resetBlocks = function() {
     var thumbs = $('#thumb-nav').children('div');
-    $('<div></div>').attr('id','loader').appendTo('#landing');
     thumbs.slideUp(500,function() {
         $(this).remove();
         // display left/right navigation
@@ -229,7 +229,6 @@ GSA.resetBlocks = function() {
         });
     });
     setTimeout(function() {
-        $('#loader').fadeOut(500, function() {$(this).remove()});
         GSA.retrieveContent();
     },900);
 };
