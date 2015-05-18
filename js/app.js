@@ -296,42 +296,42 @@ $(function(){
     });
 
     router.get('/buildings', function(req) {
-        if(GSA.initState == 'true') {
+        if(GSA.initState == true) {
             GSA.indexTracker = 1;
             GSA.routerPage();
             GSA.updateThumbIndex();
         }
     });
     router.get('/products-services', function(req) {
-        if(GSA.initState == 'true') {
+        if(GSA.initState == true) {
             GSA.indexTracker = 2;
             GSA.routerPage();
             GSA.updateThumbIndex();
         }
     });
     router.get('/fleets', function(req) {
-        if(GSA.initState == 'true') {
+        if(GSA.initState == true) {
             GSA.indexTracker = 3;
             GSA.routerPage();
             GSA.updateThumbIndex();
         }
     });
     router.get('/workplaces', function(req) {
-        if(GSA.initState == 'true') {
+        if(GSA.initState == true) {
             GSA.indexTracker = 4;
             GSA.routerPage();
             GSA.updateThumbIndex();
         }
     });
     router.get('/policy', function(req) {
-        if(GSA.initState == 'true') {
+        if(GSA.initState == true) {
             GSA.indexTracker = 5;
             GSA.routerPage();
             GSA.updateThumbIndex();
         }
     });
     router.get('/results', function(req) {
-        if(GSA.initState == 'true') {
+        if(GSA.initState == true) {
             GSA.indexTracker = 6;
             GSA.routerPage();
             GSA.updateThumbIndex();
