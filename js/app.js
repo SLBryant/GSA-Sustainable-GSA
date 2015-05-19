@@ -3,7 +3,7 @@ if(!GSA){
 }
 
 $(function(){
-    var router = new Grapnel({root : '/git/sustainable-gsa/'  }); // change root for production / dev /git/sustainable-gsa/ 
+    var router = new Grapnel({root : '/git/sustainable-gsa/'  }); // change root for production / dev /git/sustainable-gsa/
 
     GSA.initState = true;
     GSA.indexTracker;
@@ -196,7 +196,7 @@ $(function(){
                      label = $(this).find('aside').text(),
                      text = $(this).find('.full-display-content').html();
                      image = $(this).children('.block').css('background-image');
-                     $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background-image:"+image+"'><aside>"+title+"</aside><header>"+label+"</header><article>"+text+"</article></div>").css({height : '100%'});
+                     $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background-image:"+image+"'><aside>"+label+"</aside><header>"+title+"</header><article>"+text+"</article></div>").css({height : '100%'});
                 });
 
                 // router
@@ -211,7 +211,7 @@ $(function(){
         $('#landing').on('click',thumbBlock,function(e) {
             var thumbIndex = $(this).index();
             if(thumbIndex == 0) {
-                GSA.resetBlocks();
+                router.navigate('');
             } else {
                 e.preventDefault();
                 $(thumbBlock).removeClass('active-thumb');
@@ -279,7 +279,6 @@ $(function(){
             });
         });
         setTimeout(function() {
-            router.navigate('');
             GSA.retrieveContent();
         },900);
     };
@@ -290,12 +289,10 @@ $(function(){
     GSA.toggleActiveBlocks();
 
     //Routes
-
     router.get('', function(req) {
-        GSA.retrieveContent();
+        GSA.resetBlocks();
         GSA.initState = false;
     });
-
     router.get('/buildings', function(req) {
         if(GSA.initState == true) {
             GSA.indexTracker = 1;
