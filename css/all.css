@@ -762,7 +762,7 @@ Extenders
   .inner-block > article {
     margin: 0 25px; }
   .inner-block .overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     position: absolute;
     left: 0;
     right: 0;
