@@ -25,13 +25,13 @@
                         <div class="col-sm-6">
                             <article>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis erat sapien. Aliquam ullamcorper viverra lacus non mattis.</p>
-                                <span class="arrow-forward icon-arrow-right"></span>
+                                <!--<span class="arrow-forward icon-arrow-right"></span>-->
                             </article>
                         </div>
                         <div class="col-sm-6">
                             <article>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis erat sapien. Aliquam ullamcorper viverra lacus non mattis.</p>
-                                <span class="arrow-forward icon-arrow-right"></span>
+                                <!--<span class="arrow-forward icon-arrow-right"></span>-->
                             </article>
                         </div>
                     </div>
