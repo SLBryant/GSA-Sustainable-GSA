@@ -3,7 +3,7 @@ if(!GSA){
 }
 
 $(function(){
-    var router = new Grapnel({root : '/git/sustainable-gsa/'  }); // change root for production / dev /git/sustainable-gsa/
+    var router = new Grapnel({root : '/git/sustainable-gsa/'  }); // change root for production / dev /OGILVY/sustainable-gsa/
 
     GSA.initState = true;
     GSA.indexTracker;
@@ -83,7 +83,7 @@ $(function(){
                     label = $(this).find('aside').text(),
                     text = $(this).find('.full-display-content').html();
                 image = $(this).children('.block').css('background-image');
-                $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background-image:"+image+"'><aside>"+title+"</aside><header>"+label+"</header><article>"+text+"</article></div>").css({height : '100%'});
+                $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background-color:#f6f6f6;'><aside>"+title+"</aside><header>"+label+"</header><article>"+text+"</article></div>").css({height : '100%'});
             });
         },2000);
     };
@@ -196,7 +196,7 @@ $(function(){
                      label = $(this).find('aside').text(),
                      text = $(this).find('.full-display-content').html();
                      image = $(this).children('.block').css('background-image');
-                     $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background-image:"+image+"'><aside>"+label+"</aside><header>"+title+"</header><article>"+text+"</article></div>").css({height : '100%'});
+                     $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background: #f6f6f6;'><aside>"+label+"</aside><header>"+title+"</header><article>"+text+"</article></div>").css({height : '100%'});
                 });
 
                 // router
@@ -284,8 +284,8 @@ $(function(){
     };
 
     GSA.blockHover();
-    GSA.nextSlide();
-    GSA.prevSlide();
+    //GSA.nextSlide();
+    //GSA.prevSlide();
     GSA.toggleActiveBlocks();
 
     //Routes
