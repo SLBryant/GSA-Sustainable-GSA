@@ -15,8 +15,8 @@
         <tr>
             <td id="size">3</td><!-- bootstrap grid -->
             <td id="image">placeholder-1.jpg</td>
-            <td id="tag">Fast Forward</td>
-            <td id="title">Fleet</td>
+            <td id="tag">Fleet</td>
+            <td id="title">Fast Forward</td>
             <td id="excerpt">Here is an excerpt</td>
             <td id="content">
                 <p>GSA manages over 200,000 vehicles on behalf of over 50 Federal agencies — the second largest non-tactical fleet in the US Government. From alternative fuels, to electric vehicles, to car sharing, GSA is leading the way in Federal fleet innovation.</p>
