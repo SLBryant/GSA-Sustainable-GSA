@@ -28,10 +28,6 @@
 
         <!--- carousel -->
         <div id="sustainable-gsa">
-            <!-- button navigation -->
-            <button class="slide-section slide-right"><span class="icon-arrow-right"></span></button>
-            <button class="slide-section slide-left"><span class="icon-arrow-left"></span></button>
-
             <!-- blocks/slides -->
             <div class="blocks-container"></div>
         </div>

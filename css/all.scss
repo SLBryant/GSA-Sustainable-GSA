@@ -96,6 +96,38 @@ body{
   }
 }
 
+#columned-items {
+  article {
+    @include flexbox;
+    @include flexAlignItems(top);
+    margin: 10px 0;
+    cursor: pointer;
+    figure {
+      float: left;
+      max-width: 50px;
+      padding: 0;
+    }
+    > div {
+      padding-left: 20px;
+      float: right;
+      @include alignSelf(flex-end);
+      max-width: 100%;
+      h3 {
+        padding: 0;
+        margin: 0;
+        font-weight: bold;
+        font-size: 16px;
+        color: #424242;
+      }
+      p {
+        color: #424242;
+        padding-bottom: 0;
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
 
 
 
