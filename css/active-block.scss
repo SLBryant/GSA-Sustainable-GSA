@@ -10,6 +10,14 @@
   @include coverBG;
   height: 100%;
   padding: 20px 25px;
+  .banner-image {
+    margin-bottom: 15px;
+    background: #fff;
+      p {
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+      }
+  }
   > aside {
     top: 20px;
     left: 50px;
@@ -29,11 +37,6 @@
     margin: 0 25px;
   }
   .overlay {
-    background: rgba(0,0,0,0.4);
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
     > .row {
       > div {
         padding: 0 65px;

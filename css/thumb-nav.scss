@@ -1,3 +1,12 @@
+.active-thumb {
+  .thumb {
+    opacity: 0.5!important;
+    header {
+      display: block!important;
+    }
+  }
+}
+
 #thumb-nav {
   margin-bottom: 10px;
   .thumb-wrap {
@@ -5,9 +14,6 @@
     margin: 0 2px;
     display: none;
     background-color: rgba(0,0,0,1);
-    &:first-child {
-      margin-left: 0;
-    }
     .thumb {
       overflow: hidden;
       height: 100px;
@@ -16,25 +22,32 @@
       color: rgba(255,255,255,1);
       text-decoration: 1px 1px 1px rgba(0,0,0,0.8);
       position: relative;
-      opacity: 0.5;
+      opacity: 1;
       @include coverBG();
         header {
           position: absolute;
           bottom: 10px;
           left: 10px;
+          padding: 2px 6px;
+          background: $sustainableGreen;
           text-transform: uppercase;
-          @include font-size(21px);
-          font-weight: 600;
-          text-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+          @include font-size(19px);
+          display: none;
         }
 
+    }
+    &:first-child {
+      margin-left: 0;
+      header {
+        display: block!important;
+        background: none;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 500;
+        top: 30px;
+      }
     }
   }
 }
 
-.active-thumb {
-  .thumb {
-    opacity: 1!important;
-  }
-}
 

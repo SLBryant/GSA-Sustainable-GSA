@@ -34,6 +34,11 @@
 
     </section>
 
+    <section id="additional-content">
+        <!-- ANOTHER ROW OF CONTENT HERE -->
+
+    </section>
+
     <?php include('footer.php'); ?>
 
 

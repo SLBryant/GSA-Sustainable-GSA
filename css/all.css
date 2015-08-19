@@ -746,6 +746,12 @@ Extenders
   background-repeat: no-repeat;
   height: 100%;
   padding: 20px 25px; }
+  .inner-block .banner-image {
+    margin-bottom: 15px;
+    background: #fff; }
+    .inner-block .banner-image p {
+      padding: 15px;
+      border-bottom: 1px solid #ccc; }
   .inner-block > aside {
     top: 20px;
     left: 50px;
@@ -763,21 +769,15 @@ Extenders
     font-size: 3.125rem; }
   .inner-block > article {
     margin: 0 25px; }
-  .inner-block .overlay {
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%; }
-    .inner-block .overlay > .row > div {
-      padding: 0 65px; }
-    .inner-block .overlay article {
-      position: relative;
-      padding: 15px 0; }
-      .inner-block .overlay article span {
-        position: absolute;
-        top: 50%;
-        right: -8px; }
+  .inner-block .overlay > .row > div {
+    padding: 0 65px; }
+  .inner-block .overlay article {
+    position: relative;
+    padding: 15px 0; }
+    .inner-block .overlay article span {
+      position: absolute;
+      top: 50%;
+      right: -8px; }
 
 .slide {
   opacity: 0;
@@ -792,6 +792,11 @@ Extenders
 .current {
   opacity: 1; }
 
+.active-thumb .thumb {
+  opacity: 0.5 !important; }
+  .active-thumb .thumb header {
+    display: block !important; }
+
 #thumb-nav {
   margin-bottom: 10px; }
   #thumb-nav .thumb-wrap {
@@ -799,8 +804,6 @@ Extenders
     margin: 0 2px;
     display: none;
     background-color: black; }
-    #thumb-nav .thumb-wrap:first-child {
-      margin-left: 0; }
     #thumb-nav .thumb-wrap .thumb {
       overflow: hidden;
       height: 100px;
@@ -809,7 +812,7 @@ Extenders
       color: white;
       text-decoration: 1px 1px 1px rgba(0, 0, 0, 0.8);
       position: relative;
-      opacity: 0.5;
+      opacity: 1;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -820,14 +823,21 @@ Extenders
         position: absolute;
         bottom: 10px;
         left: 10px;
+        padding: 2px 6px;
+        background: green;
         text-transform: uppercase;
-        font-size: 21px;
-        font-size: 1.3125rem;
-        font-weight: 600;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75); }
-
-.active-thumb .thumb {
-  opacity: 1 !important; }
+        font-size: 19px;
+        font-size: 1.1875rem;
+        display: none; }
+    #thumb-nav .thumb-wrap:first-child {
+      margin-left: 0; }
+      #thumb-nav .thumb-wrap:first-child header {
+        display: block !important;
+        background: none;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 500;
+        top: 30px; }
 
 body {
   background-color: #ced5f2;

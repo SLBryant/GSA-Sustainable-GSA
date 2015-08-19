@@ -11,7 +11,7 @@ $(function(){
         1: 'strategically-sustainable',
         2: 'buildings',
         3: 'products-services',
-        4: 'fleets',
+        4: 'fleet',
         5: 'workplaces',
         6: 'policy',
         7: 'results'
@@ -59,9 +59,6 @@ $(function(){
             //
             var currentBlockItem = $('.block-wrap').eq(GSA.indexTracker);
             var header = currentBlockItem.find('aside').text();
-            //maintain height of display area and get index number of clicked block
-            var wrapper = $('.blocks-container');
-            wrapper.height('500px');
 
             //assign the active block and create some variables
             var offsetLeft = currentBlockItem.position().left,
@@ -85,6 +82,11 @@ $(function(){
                 image = $(this).children('.block').css('background-image');
                 $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background-color:#f6f6f6;'><aside>"+title+"</aside><header>"+label+"</header><article>"+text+"</article></div>").css({height : '100%'});
             });
+            setTimeout(function() {
+                var wrapper = $('.blocks-container');
+                var heightofActiveBlock = parseInt($('.current .inner-block > article').height() + 75);
+                wrapper.height(heightofActiveBlock);
+            },200);
         },2000);
     };
 
@@ -100,8 +102,8 @@ $(function(){
         var template = '<div class="col-sm-'+size+' block-wrap" data-sort="'+key+'">'+
                             '<div class="block" style="background-image: url(images/'+image+')">'+
                                 '<a data-content="ajax">'+
-                                    '<aside><span>'+tag+'</span></aside>'+
-                                    '<header>'+title+'</header>'+
+                                    '<aside><span>'+title+'</span></aside>'+
+                                    '<header>'+tag+'</header>'+
                                     '<article class="rollover">'+
                                         '<span class="arrow"><i class="icon-arrow-right"></i></span>'+
                                         excerpt +
@@ -112,8 +114,10 @@ $(function(){
                                content +
                             '</div>'+
                         '</div>';
-
-        $('.blocks-container').append(template);
+        //maintain height of display area and get index number of clicked block
+        var wrapper = $('.blocks-container');
+        wrapper.height('500px');
+        wrapper.append(template);
     };
 
     GSA.blockHover = function() {
@@ -161,6 +165,12 @@ $(function(){
         });
     };
 
+    GSA.hoverThumbs = function() {
+        $('.thumb-wrap').hover(function() {
+            $(this).find('.thumb').animate({opacity: 0.5},200);
+        });
+    };
+
     GSA.activateBlocks = new function() {
         //disable functionality for first block click
         $('#landing').on('click','.block',function(e) {
@@ -198,6 +208,10 @@ $(function(){
                      image = $(this).children('.block').css('background-image');
                      $(this).removeClass('block-wrap col-sm-3 col-sm-6').addClass('slide').html("<div class='inner-block' style='background: #f6f6f6;'><aside>"+label+"</aside><header>"+title+"</header><article>"+text+"</article></div>").css({height : '100%'});
                 });
+                setTimeout(function() {
+                    var heightofActiveBlock = parseInt($('.current .inner-block > article').height() + 75);
+                    wrapper.height(heightofActiveBlock);
+                },200);
 
                 // router
                 router.navigate('#/'+GSA.CIDs[indexValue]);
@@ -208,6 +222,7 @@ $(function(){
 
     GSA.toggleActiveBlocks = function() {
         var thumbBlock = '#thumb-nav > div';
+        var wrapper = $('.blocks-container');
         $('#landing').on('click',thumbBlock,function(e) {
             var thumbIndex = $(this).index();
             if(thumbIndex == 0) {
@@ -219,6 +234,8 @@ $(function(){
                 var currentSlide = $('.blocks-container > div').eq(thumbIndex);
                 currentSlide.addClass('current').fadeIn(500,function() {
                     $('.current').not(currentSlide).fadeOut(300).delay(300).removeClass('current');
+                    var heightofActiveBlock = parseInt($('.current .inner-block > article').height() + 175);
+                    wrapper.height(heightofActiveBlock);
                 });
                 GSA.indexTracker = thumbIndex;
                 //router
@@ -284,8 +301,6 @@ $(function(){
     };
 
     GSA.blockHover();
-    //GSA.nextSlide();
-    //GSA.prevSlide();
     GSA.toggleActiveBlocks();
 
     //Routes
@@ -307,7 +322,7 @@ $(function(){
             GSA.updateThumbIndex();
         }
     });
-    router.get('/fleets', function(req) {
+    router.get('/fleet', function(req) {
         if(GSA.initState == true) {
             GSA.indexTracker = 3;
             GSA.routerPage();

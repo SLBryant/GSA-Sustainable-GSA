@@ -5,8 +5,8 @@
         <tr>
             <th>Size</th>
             <th>Background Image</th>
-            <th>Tag</th>
             <th>Title</th>
+            <th>Tag</th>
             <th>Excerpt</th>
             <th>Content</th>
         </tr>
@@ -14,12 +14,15 @@
     <tbody>
         <tr>
             <td id="size">3</td><!-- bootstrap grid -->
-            <td id="image">placeholder-1.jpg</td>
-            <td id="tag">Fleet</td>
-            <td id="title">Fast Forward</td>
-            <td id="excerpt">Here is an excerpt</td>
+            <td id="image">nav-fleet.jpg</td>
+            <td id="title">Fleet</td>
+            <td id="tag">Fast Forward</td>
+            <td id="excerpt">With thousands of electric, hybrid, alternative-fuel options, and industry-leading management tools, we are the solution for efficient federal fleets.</td>
             <td id="content">
-                <p>GSA manages over 200,000 vehicles on behalf of over 50 Federal agencies — the second largest non-tactical fleet in the US Government. From alternative fuels, to electric vehicles, to car sharing, GSA is leading the way in Federal fleet innovation.</p>
+                <div class="banner-image">
+                    <img class="img-responsive" src="//placehold.it/1170x150?text=Placeholder" alt="Placeholder">
+                    <p>GSA manages over 200,000 vehicles on behalf of over 50 Federal agencies — the second largest non-tactical fleet in the US Government. From alternative fuels, to electric vehicles, to car sharing, GSA is leading the way in Federal fleet innovation.</p>
+                </div>
                     <section id="columned-items">
                         <div class="row">
                             <article class="col-md-6">
