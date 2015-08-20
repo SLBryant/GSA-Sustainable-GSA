@@ -30,7 +30,7 @@
                                     <img class="img-responsive" src="images/icon-car-flower.png" alt="Buy Green Vehicles">
                                 </figure>
                                 <div class="col-xs-10">
-                                    <h3>Buy Green Vehicles</h3>
+                                    <h3><a href="/portal/content/105378">Buy Green Vehicles</a></h3>
                                     <p>GSA Fleet offers thousands of low-cost, high-efficiency vehicle options to help Federal agencies meet their missions sustainably.</p>
                                 </div>
                             </article>
@@ -39,7 +39,7 @@
                                     <img class="img-responsive" src="images/icon-phone.png" alt="Alternate Fuel Vehicle (AFV) Tool">
                                 </figure>
                                 <div class="col-xs-10">
-                                    <h3>Alternate Fuel Vehicle (AFV) Tool</h3>
+                                    <h3><a href="/portal/content/104224">Alternate Fuel Vehicle (AFV) Tool</a></h3>
                                     <p>Helps agencies compare AFV options by size, price, fuel, availability, CO2 grams per mile, and lifetime GHG emissions. </p>
                                 </div>
                             </article>
@@ -50,7 +50,7 @@
                                     <img class="img-responsive" src="images/icon-plug.png" alt="Electric Vehicle Pilots">
                                 </figure>
                                 <div class="col-xs-10">
-                                    <h3>Electric Vehicle Pilots</h3>
+                                    <h3><a href="/portal/content/281581">Electric Vehicle Pilots</a></h3>
                                     <p>GSA has incorporated over 300 all-electric vehicles and 169 charging stations (and counting) into Federal fleets.</p>
                                 </div>
                             </article>
@@ -59,7 +59,7 @@
                                     <img class="img-responsive" src="images/icon-car.png" alt="CNG Light Truck Initiative">
                                 </figure>
                                 <div class="col-xs-10">
-                                    <h3>CNG Light Truck Initiative</h3>
+                                    <h3><a href="http://gsablogs.gsa.gov/gsablog/tag/fleet/" target="_blank">CNG Light Truck Initiative</a></h3>
                                     <p>Agencies can acquire alternatively fueled pickup trucks and decrease dependence on foreign fuel sources. </p>
                                 </div>
                             </article>
@@ -70,7 +70,7 @@
                                     <img class="img-responsive" src="images/icon-key.png" alt="Short Term Rental Program">
                                 </figure>
                                 <div class="col-xs-10">
-                                    <h3>Short Term Rental Program</h3>
+                                    <h3><a href="/portal/content/102675">Short Term Rental Program</a></h3>
                                     <p>GSA helps agencies reduce their fleet size, increase utilization, and simplify procurement with cost-effective short term rental solutions. </p>
                                 </div>
                             </article>
@@ -79,7 +79,7 @@
                                     <img class="img-responsive" src="images/icon-people.png" alt="Car Sharing">
                                 </figure>
                                 <div class="col-xs-10">
-                                    <h3>Car Sharing</h3>
+                                    <h3><a href="/portal/content/199127">Car Sharing Pilot Programs</a></h3>
                                     <p>GSA is testing car-sharing technologies and services to determine their effectiveness in the Federal fleet context.  </p>
                                 </div>
                             </article>
