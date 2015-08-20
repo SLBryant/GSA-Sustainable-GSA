@@ -26,7 +26,7 @@
                         <img class="img-responsive" src="//placehold.it/1170x150?text=Placeholder" alt="Placeholder">
                         <p>GSA works together with industry partners and other agencies to translate sustainability policy into action.</p>
                     </div>
-                    <section class="columned-items">
+                    <section id="columned-items">
                         <div class="row">
                             <div class="col-md-6">
                                 <article>
