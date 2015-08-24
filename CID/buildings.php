@@ -30,7 +30,7 @@
                         <div class="row">
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Buy Green Vehicles">
+                                    <img class="img-responsive" src="images/buildings-certification.jpg" alt="Awards & Certifications Icon">
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="/portal/content/104927">Awards & Certifications</a></h3>
@@ -39,7 +39,7 @@
                             </article>
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Alternate Fuel Vehicle (AFV) Tool">
+                                    <img class="img-responsive" src="images/buildings-gpg.jpg" alt="Green Proving Ground Icon">
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="/portal/content/121935">Green Proving Ground</a></h3>
@@ -50,7 +50,7 @@
                         <div class="row">
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Electric Vehicle Pilots">
+                                    <img class="img-responsive" src="images/buildings-netzero.jpg" alt="NetZero Design Icon">
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="/portal/content/181035">NetZero Design</a></h3>
@@ -59,7 +59,7 @@
                             </article>
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="CNG Light Truck Initiative">
+                                    <img class="img-responsive" src="images/buildings-sftool.jpg" alt="SFTool Icon">
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="https://sftool.gov/" target="_blank">SFTool</a></h3>
@@ -71,7 +71,7 @@
                             <div class="col-md-6">
                                 <article>
                                     <figure class="col-xs-2">
-                                        <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Electric Vehicle Pilots">
+                                        <img class="img-responsive" src="images/buildings-greenroofs.jpg" alt="Green Roofs Icon">
                                     </figure>
                                     <div class="col-xs-10">
                                         <h3><a href="/portal/content/166443">Green Roofs</a></h3>
@@ -80,7 +80,7 @@
                                 </article>
                                 <article>
                                     <figure class="col-xs-2">
-                                        <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Electric Vehicle Pilots">
+                                        <img class="img-responsive" src="images/buildings-smart.jpg" alt="Smart Buildings Icon">
                                     </figure>
                                     <div class="col-xs-10">
                                         <h3><a href="/portal/content/198217">Smart Buildings</a></h3>
@@ -91,7 +91,7 @@
                             <div class="col-md-6">
                                 <article>
                                     <figure class="col-xs-2">
-                                        <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="CNG Light Truck Initiative">
+                                        <img class="img-responsive" src="images/buildings-programoffices.jpg" alt="Green Buildings Program Office Icon">
                                     </figure>
                                     <div class="col-xs-10">
                                         <h3><a href="/portal/content/123747">Green Building Program Office</a></h3>
