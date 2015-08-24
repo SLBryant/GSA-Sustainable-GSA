@@ -30,7 +30,7 @@
                         <div class="row">
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                    <img class="img-responsive" src="images/products-cleanenergy.png" alt="Clean Energy Procurement Icon" />
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="/portal/content/100856">Clean Energy Procurement</a></h3>
@@ -39,7 +39,7 @@
                             </article>
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                    <img class="img-responsive" src="images/products-it.png" alt="Green IT Icon" />
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="/portal/content/184837">Green IT</a></h3>
@@ -50,7 +50,7 @@
                         <div class="row">
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                    <img class="img-responsive" src="images/products-procurement.png" alt="Green Procurement Compilation Icon" />
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="https://sftool.gov/GreenProcurement" target="_blank">Green Procurement Compilation</a></h3>
@@ -65,7 +65,7 @@
                             </article>
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                    <img class="img-responsive" src="images/products-greenservices.png" alt="Green Services Icon" />
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="/portal/content/105375">Buy Green Services</a></h3>
@@ -76,7 +76,7 @@
                         <div class="row">
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                    <img class="img-responsive" src="images/products-greenproducts.png" alt="Green Products Icon" />
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="/portal/content/105363">Buy Green Products</a></h3>

@@ -27,7 +27,7 @@
                     <div class="row">
                         <article class="col-md-6">
                             <figure class="col-xs-2">
-                                <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                <img class="img-responsive" src="images/workplace-total.png" alt="Total Workplace Icon" />
                             </figure>
                             <div class="col-xs-10">
                                 <h3><a href="/portal/content/178259">Total Workplace</a></h3>
@@ -36,7 +36,7 @@
                         </article>
                         <article class="col-md-6">
                             <figure class="col-xs-2">
-                                <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                <img class="img-responsive" src="images/workplace-fitwel.png" alt="FITWEL Icon" />
                             </figure>
                             <div class="col-xs-10">
                                 <h3><a href="http://www.thesustainableleader.org/2013/09/02/fit-wel-certifying-a-healthy-building-environment/" target="_blank">FITWEL</a></h3>
@@ -47,7 +47,7 @@
                     <div class="row">
                         <article class="col-md-6">
                             <figure class="col-xs-2">
-                                <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                <img class="img-responsive" src="images/workplace-telework.png" alt="Telework Icon" />
                             </figure>
                             <div class="col-xs-10">
                                 <h3><a href="/portal/content/105192">Telework</a></h3>
