@@ -59,7 +59,7 @@
                             </article>
                             <article class="col-md-6">
                                 <figure class="col-xs-2">
-                                    <img class="img-responsive" src="greenbuildings_sftool.jpg" alt="CNG Light Truck Initiative">
+                                    <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="CNG Light Truck Initiative">
                                 </figure>
                                 <div class="col-xs-10">
                                     <h3><a href="https://sftool.gov/" target="_blank">SFTool</a></h3>
