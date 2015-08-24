@@ -31,7 +31,7 @@
                             <div class="col-md-6">
                                 <article>
                                     <figure class="col-xs-2">
-                                        <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                        <img class="img-responsive" src="images/policy-supplychain.png" alt="Greening the Supply Chain Icon" />
                                     </figure>
                                     <div class="col-xs-10">
                                         <h3><a href="/portal/content/285653">Greening the Supply Chain</a></h3>
@@ -41,7 +41,7 @@
                                 </article>
                                 <article>
                                     <figure class="col-xs-2">
-                                        <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                        <img class="img-responsive" src="images/policy-advisory.png" alt="Green Building Advisory Committee Icon" />
                                     </figure>
                                     <div class="col-xs-10">
                                         <h3><a href="/portal/content/121999">Green Building Advisory Committee</a></h3>
@@ -50,7 +50,7 @@
                                 </article>
                                 <article>
                                     <figure class="col-xs-2">
-                                        <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                        <img class="img-responsive" src="images/policy-certification.png" alt="Green Buildings Certification System Review Icon" />
                                     </figure>
                                     <div class="col-xs-10">
                                         <h3><a href="/portal/content/131983">Green Buildings Certification System Review</a></h3>
@@ -61,7 +61,7 @@
                             <div class="col-md-6">
                                 <article>
                                     <figure class="col-xs-2">
-                                        <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                        <img class="img-responsive" src="images/policy-electronics.png" alt="Electronics Stewardship Icon" />
                                     </figure>
                                     <div class="col-xs-10">
                                         <h3>Electronics Stewardship</h3>
@@ -71,7 +71,7 @@
                                 </article>
                                 <article>
                                     <figure class="col-xs-2">
-                                        <img class="img-responsive" src="//placehold.it/200x200/63a723?text=Placeholder" alt="Placeholder" />
+                                        <img class="img-responsive" src="images/policy-executiveorders.png" alt="Executive Orders Icon" />
                                     </figure>
                                     <div class="col-xs-10">
                                         <h3>Executive Orders and Statutes:</h3>
