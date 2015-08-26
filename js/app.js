@@ -166,9 +166,16 @@ $(function(){
     };
 
     GSA.hoverThumbs = function() {
-        $('.thumb-wrap').hover(function() {
-            $(this).find('.thumb').animate({opacity: 0.5},200);
-        });
+        $("#landing").on({
+            mouseenter: function () {
+                $(this).find('.thumb').stop().animate({opacity: 1},200);
+				$(this).find('header').show(200);
+            },
+            mouseleave: function () {
+                $(this).find('.thumb').stop().animate({opacity: 0.5},200);
+				$(this).find('header').hide(200);
+            }
+        },'#thumb-nav > div');
     };
 
     GSA.activateBlocks = new function() {
@@ -250,40 +257,6 @@ $(function(){
         $('#thumb-nav > div').eq(GSA.indexTracker).addClass('active-thumb');
     };
 
-    GSA.nextSlide = function() {
-        $('#landing').on('click','.slide-right', function() {
-            $('.current').next('.slide').addClass('current').fadeIn(1, function() {
-                $('.current').prev('.slide').removeClass('current').fadeOut(500);
-            });
-            GSA.indexTracker++;
-            if(GSA.indexTracker == ($('.slide').length - 1)) {
-                $('.slide-right').fadeOut(300);
-            }
-            GSA.updateThumbIndex();
-            //router
-            router.navigate('#/'+GSA.CIDs[GSA.indexTracker+1]);
-        })
-    };
-
-    GSA.prevSlide = function() {
-        $('#landing').on('click','.slide-left', function() {
-            if(GSA.indexTracker == 1) {
-                GSA.resetBlocks();
-            } else {
-                $('.current').prev('.slide').addClass('current').fadeIn(1, function () {
-                    $('.current').next('.slide').removeClass('current').fadeOut(500);
-                });
-                GSA.indexTracker--;
-                if (GSA.indexTracker == ($('.slide').length - 1)) {
-                    $('.slide-left').fadeOut(300);
-                }
-                GSA.updateThumbIndex();
-                //router
-                router.navigate('#/'+GSA.CIDs[GSA.indexTracker+1]);
-            }
-        })
-    };
-
     GSA.resetBlocks = function() {
         var thumbs = $('#thumb-nav').children('div');
         thumbs.slideUp(500,function() {
@@ -299,9 +272,6 @@ $(function(){
             GSA.retrieveContent();
         },900);
     };
-
-    GSA.blockHover();
-    GSA.toggleActiveBlocks();
 
     //Routes
     router.get('', function(req) {
@@ -351,6 +321,9 @@ $(function(){
         }
     });
 
+	GSA.blockHover();
+    GSA.toggleActiveBlocks();
+	GSA.hoverThumbs();
 
 });
 
