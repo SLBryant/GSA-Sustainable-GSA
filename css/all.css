@@ -828,16 +828,18 @@ Extenders
         text-transform: uppercase;
         font-size: 19px;
         font-size: 1.1875rem;
-        display: none; }
+        display: block; }
     #thumb-nav .thumb-wrap:first-child {
       margin-left: 0; }
-      #thumb-nav .thumb-wrap:first-child .thumb header {
-        display: block !important;
-        background: none;
-        font-size: 18px;
-        line-height: 1.2;
-        font-weight: 500;
-        top: 30px; }
+      #thumb-nav .thumb-wrap:first-child .thumb {
+        opacity: 1 !important; }
+        #thumb-nav .thumb-wrap:first-child .thumb header {
+          display: block !important;
+          background: none;
+          font-size: 18px;
+          line-height: 1.2;
+          font-weight: 500;
+          top: 30px; }
 
 body {
   background-color: #ced5f2;

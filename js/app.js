@@ -169,13 +169,13 @@ $(function(){
         $("#landing").on({
             mouseenter: function () {
                 $(this).find('.thumb').stop().animate({opacity: 1},200);
-				$(this).find('header').show(200);
+				$(this).find('header').hide(200);
             },
             mouseleave: function () {
                 $(this).find('.thumb').stop().animate({opacity: 0.5},200);
-				$(this).find('header').hide(200);
+				$(this).find('header').show(200);
             }
-        },'#thumb-nav > div');
+        },'#thumb-nav > div:not(:first-child)');
     };
 
     GSA.activateBlocks = new function() {

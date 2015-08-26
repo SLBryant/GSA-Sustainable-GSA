@@ -32,14 +32,14 @@
           background: $sustainableGreen;
           text-transform: uppercase;
           @include font-size(19px);
-          display: none;
+          display: block;
         }
 
     }
     &:first-child {
       margin-left: 0;
         .thumb {
-          //opacity: 1!important;   
+          opacity: 1!important;
           header {
             display: block !important;
             background: none;
