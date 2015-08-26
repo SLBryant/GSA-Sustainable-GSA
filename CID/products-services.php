@@ -15,7 +15,7 @@
             <tr>
                 <td id="size">3</td>
                 <!-- bootstrap grid -->
-                <td id="image">placeholder-3.jpg</td>
+                <td id="image">nav-products-services.jpg</td>
                 <td id="title">Products &amp; Services</td>
                 <td id="tag">See More Green</td>
                 <td id="excerpt">
